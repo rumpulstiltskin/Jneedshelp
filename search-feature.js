@@ -14,9 +14,7 @@ app.post('/search', (req, res) => {
 
 app.get('/display', (req, res) => {
   const message = req.query.message;
-  res.send(`
-${message}
-`);
+  res.render('display', { message });
 });
 
 const PORT = process.env.PORT || 3000;
